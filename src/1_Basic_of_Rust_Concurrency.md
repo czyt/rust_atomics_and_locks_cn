@@ -1,5 +1,4 @@
 # 第一章：Rust 并发基础
-[toc]
 
 （[英文版本](https://marabos.nl/atomics/basics.html)）
 
