@@ -248,5 +248,3 @@
 [//]: # (* [教学材料]&#40;./10_Ideas_and_Inspiration.md#教学材料&#41;)
 
 ## [索引](./attachment.md)
-
-> 本文档基于[rust中文网翻译的中文版](https://github.com/rustcc/Rust_Atomics_and_Locks)使用mdbook构建.
