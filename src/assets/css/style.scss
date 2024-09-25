@@ -1,0 +1,169 @@
+--- 
+--- 
+
+@import "{{ site.theme }}";
+
+:root{
+  --light-color-theme: rgb(101, 123, 131);
+  --light-bg-theme: #fff;
+  --light-color-a: #6ca586;
+  --light-color-a-hover: #046960;
+  --light-bg-code: rgba(69, 132, 161, 0.85);
+  --light-bg-pre: rgb(254, 246, 229);
+  --light-color-h: #402e52;
+
+  --dark-color-theme: var(--light-bg-theme);
+  --dark-bg-theme: #000;
+  --dark-color-a: rgba(96, 255, 220, 0.7);
+  --dark-color-a-hover: #04fbc5;
+  --dark-bg-code: rgb(31, 91, 62);
+  --dark-border-table: var(--dark-bg-code);
+  --dark-bg-pre: rgb(45, 43, 85);
+  --dark-color-h: rgb(0, 208, 212);
+}
+
+html,body, .markdown-body {
+  color: var(--light-color-theme);
+}
+
+a {
+  color: var(--light-color-a);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--light-color-a-hover);
+}
+
+.markdown-body code {
+  background-color: var(--light-bg-code);
+  color: white;
+}
+
+.markdown-body .highlight,
+.markdown-body pre {
+  background: var(--light-bg-pre);
+  pre:where(.highlight){
+    background: var(--light-bg-pre);
+  }
+
+  code.language-txt {
+    color: var(--light-color-theme);
+  }
+  
+  .c {
+    color: rgb(147, 161, 161);
+  }
+
+  .n{
+    color:rgb(101, 123, 131);
+  }
+
+  .k, .kv, .o {
+    color: rgb(133, 153, 0);
+  }
+    
+  .nd, .nn, .nf, .nb, .py {
+    color: rgb(38, 139, 210);
+  }
+    
+  .p {
+    color: rgb(255, 215, 0);
+  }
+    
+  .mi {
+    color: rgb(42, 161, 152)
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--light-color-h);
+}
+
+.box {
+  border: medium solid green;
+  padding: 1rem;
+  pre {
+      color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,body,.markdown-body {
+    background-color: var(--dark-bg-theme);
+    color: var(--dark-color-theme);
+  }
+
+  .markdown-body table th,
+  .markdown-body table td{
+    border-color: var(--dark-border-table);
+    background-color: var(--dark-bg-theme);
+  }
+
+  .markdown-body .highlight,
+  .markdown-body pre {
+    background: var(--dark-bg-pre);
+
+    pre:where(.highlight){
+      background: var(--dark-bg-pre);
+    }
+
+    code.language-txt {
+      color: var(--dark-color-theme);
+    }
+
+    .c {
+      color: rgb(179, 98, 255);
+    }
+    
+    .n {
+      color: #fff;
+    }
+
+    .k, .kv, .o {
+      color: rgb(255, 157, 0);
+    }
+
+    .nd, .nn, .nf, .nb {
+      color: rgb(250, 208, 0);
+    }
+
+    .p {
+      color: rgb(222, 236, 252);
+    }
+
+    .mi {
+      color: rgb(236,92,133)
+    }
+  }
+
+  .box pre {
+    color: var(--dark-color-theme);
+  }
+
+  .markdown-body code {
+    background: var(--dark-bg-code);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--dark-color-h);
+  }
+
+  a {
+    color: var(--dark-color-a);
+  }
+
+  a:hover {
+    color: var(--dark-color-a-hover);
+  }
+}
